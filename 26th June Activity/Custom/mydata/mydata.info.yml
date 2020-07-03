@@ -1,0 +1,5 @@
+name: mydata
+type: module
+description: This dispaly 27th June Activity.
+core: 8.x
+package: Custom

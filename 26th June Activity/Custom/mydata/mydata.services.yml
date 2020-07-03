@@ -1,0 +1,5 @@
+services:
+  mydata.event_subscriber_example:
+    class: Drupal\mydata\EventSubscriber\ArticleEventSubScriber
+    tags:
+      - { name: 'event_subscriber' }
