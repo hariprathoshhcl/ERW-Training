@@ -1,0 +1,7 @@
+migrate_training.delete_node_example:
+  path: '/batch-example/delete'
+  defaults:
+    _form: '\Drupal\migrate_training\Form\DeleteNodeForm'
+    _title: 'Migrate Example'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,31 @@
+id: first
+label: First Paragraph
+migration_group: migrate_training_multi
+source:
+  plugin: 'csv'
+  path: 'C:/xampp/htdocs/drupaltraining/modules/csv.csv'
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The row to be used as the CSV header (indexed from 0), 
+  # or null if there is no header row.
+  header_offset: 0
+  # The column(s) to use as a key. Each column specified will 
+  # create an index in the migration table and too many columns 
+  # may throw an index size error.
+  ids:
+    - id
+
+  constants:
+    file_destination: 'public://images/'
+process:
+  field_image:
+    plugin: image_import
+    source: banner_image
+    destination: 'constants/file_destination'
+  field_link/title: banner_link_text
+  field_link/uri: banner_link
+
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: first_paragraphs

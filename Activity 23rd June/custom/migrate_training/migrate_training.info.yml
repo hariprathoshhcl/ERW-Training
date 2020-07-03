@@ -1,0 +1,5 @@
+name: 'migrate_training'
+type: module
+description: 'Migration Training'
+core: 8.x
+package: 'Custom'

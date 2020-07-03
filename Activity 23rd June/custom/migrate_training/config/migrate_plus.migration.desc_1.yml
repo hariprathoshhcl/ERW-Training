@@ -1,0 +1,34 @@
+id: desc_1
+label: Desc 1
+migration_group: migrate_training_multi
+source:
+  plugin: 'csv'
+  path: 'C:/xampp/htdocs/drupaltraining/modules/csv.csv'
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  enclosure: '"'
+  # The row to be used as the CSV header (indexed from 0), 
+  # or null if there is no header row.
+  header_offset: 0
+  # The column(s) to use as a key. Each column specified will 
+  # create an index in the migration table and too many columns 
+  # may throw an index size error.
+  ids:
+    - id
+  constants:
+    file_destination: 'public://images/'
+process:
+  field_desc: desc1
+  field_image:
+    plugin: image_import
+    source: img1
+    destination: 'constants/file_destination'
+    title: file_title
+#  field_media_test:
+#    plugin: migration_lookup
+#    migration: my_migration_id_media
+#    source: id
+
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: desc_1
