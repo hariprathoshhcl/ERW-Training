@@ -1,0 +1,5 @@
+name: Calculator
+type: module
+description: 'Calculator class for add sub multiply divide.'
+package: custom
+core: 8.x

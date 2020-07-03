@@ -1,0 +1,15 @@
+calculator.calcAllFun:
+
+  path: '/calculator'
+
+  defaults:
+
+    _controller:
+
+'Drupal\calculator\Controller\CalculatorController::calcAllFun'
+
+    _title: 'calculator'
+
+  requirements:
+
+    _permission: 'access content'
