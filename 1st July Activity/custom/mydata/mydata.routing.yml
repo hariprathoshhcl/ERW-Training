@@ -1,0 +1,25 @@
+mydata.mydata_form:
+  path: '/mydata/form/mydata'
+  defaults:
+    _form: '\Drupal\mydata\Form\MydataForm'
+    _title: '1st July Activity'
+  requirements:
+    _access: 'TRUE'
+
+
+mydata.mydata_controller_display:
+  path: '/mydata/view/{uid}'
+  defaults:
+    _controller: '\Drupal\mydata\Controller\DisplayTableController::display'
+    _title: 'View of Entered record'
+  requirements:
+    _permission: 'access content'
+
+
+mydata.mydata_admin_display:
+  path: '/mydata/admin'
+  defaults:
+    _controller: '\Drupal\mydata\Controller\AdminTableController::display'
+    _title: 'View of Users record'
+  requirements:
+    _permission: 'access content'
